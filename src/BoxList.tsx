@@ -14,7 +14,7 @@ function BoxList() {
   const [boxes, setBoxes] = useState<BoxesInterface[]>([])
 
   /** add box with given { id, width, height, backgroundColor } */
-  function add(newBox: BoxesInterface):void {
+  function add(newBox: BoxesInterface): void {
     setBoxes(boxes => [...boxes, newBox]);
   }
 
