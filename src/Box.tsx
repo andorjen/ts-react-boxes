@@ -1,3 +1,6 @@
+import { BoxProps } from "./Interfaces"
+
+
 /** Colored box presentation
  *
  * Props:
@@ -10,18 +13,10 @@
  * BoxList -> Box
  */
 
-interface BoxProps {
-  id:string;
-  width:number;
-  height:number;
-  backgroundColor: string;
-  remove: (id:string)=>void;
-}
-
-function Box({ id, width = 5, height = 5, backgroundColor, remove }:BoxProps) {
+function Box({ id, width = "5", height = "5", backgroundColor, remove }: BoxProps) {
 
   /** Remove a box. */
-  function handleRemove():void{
+  function handleRemove(): void {
     remove(id);
   }
 
